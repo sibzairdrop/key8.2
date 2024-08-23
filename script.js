@@ -1,55 +1,73 @@
 document.addEventListener('DOMContentLoaded', () => {
     const EVENTS_DELAY = 20000;
-    const MAX_KEYS_PER_GAME_PER_DAY = 4;
+    const MAX_KEYS_PER_GAME_PER_DAY = 20;
 
     const games = {
         1: {
             name: 'Riding Extreme 3D',
             appToken: 'd28721be-fd2d-4b45-869e-9f253b554e50',
             promoId: '43e35910-c168-4634-ad4f-52fd764a843f',
+            timing: 30000,
+            attempts: 25,
         },
         2: {
             name: 'Chain Cube 2048',
             appToken: 'd1690a07-3780-4068-810f-9b5bbf2931b2',
             promoId: 'b4170868-cef0-424f-8eb9-be0622e8e8e3',
+            timing: 30000,
+            attempts: 20,
         },
         3: {
             name: 'My Clone Army',
             appToken: '74ee0b5b-775e-4bee-974f-63e7f4d5bacb',
             promoId: 'fe693b26-b342-4159-8808-15e3ff7f8767',
+            timing: 180000,
+            attempts: 30,
         },
         4: {
             name: 'Train Miner',
             appToken: '82647f43-3f87-402d-88dd-09a90025313f',
             promoId: 'c4480ac7-e178-4973-8061-9ed5b2e17954',
+            timing: 30000, 
+            attempts: 15,
         },
         5: {
             name: 'Merge Away',
             appToken: '8d1cc2ad-e097-4b86-90ef-7a27e19fb833',
             promoId: 'dc128d28-c45b-411c-98ff-ac7726fbaea4',
+            timing: 30000,
+            attempts: 25,
         },
         6: {
             name: 'Twerk Race 3D',
             appToken: '61308365-9d16-4040-8bb0-2f4a4c69074c',
             promoId: '61308365-9d16-4040-8bb0-2f4a4c69074c',
+            timing: 30000, 
+            attempts: 20,
         },
-        7 : {
+        7: {
             name: 'Polysphere',
             appToken: '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71',
             promoId: '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71',
-         },
-        8: {
-            name: 'Mow and Trim',
-            appToken: 'ef319a80-949a-492e-8ee0-424fb5fc20a6',
-            promoId: 'ef319a80-949a-492e-8ee0-424fb5fc20a6',
+            timing: 20000, 
+            attempts: 20,
         },
-        9: {
+        8: {
             name: 'Mud Racing',
             appToken: '8814a785-97fb-4177-9193-ca4180ff9da8',
             promoId: '8814a785-97fb-4177-9193-ca4180ff9da8',
+            timing: 30000,
+            attempts: 20,
+        },
+        9: {
+            name: 'Mow and Trim',
+            appToken: 'ef319a80-949a-492e-8ee0-424fb5fc20a6',
+            promoId: 'ef319a80-949a-492e-8ee0-424fb5fc20a6',
+            timing: 30000,
+            attempts: 20,
         }
     };
-    };
+    
 
     const startBtn = document.getElementById('startBtn');
     const keyCountSelect = document.getElementById('keyCountSelect');
@@ -290,5 +308,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     telegramChannelBtn.addEventListener('click', () => {
         window.open('https://telegram.me/Buisness_idea_BuisnessIdea', '_blank');
+    });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const games = {
+        1: { name: 'Riding Extreme 3D' },
+        2: { name: 'Chain Cube 2048' },
+        3: { name: 'My Clone Army' },
+        4: { name: 'Train Miner' },
+        5: { name: 'Merge Away' },
+        6: { name: 'Twerk Race 3D' }
+    };
+
+    const gameSelect = document.getElementById('gameSelect');
+    const generatedKeysTitle = document.getElementById('generatedKeysTitle');
+
+    // Update selected game dynamically when game is chosen from dropdown
+    gameSelect.addEventListener('change', function () {
+        const selectedGame = games[gameSelect.value];
+        if (selectedGame) {
+            generatedKeysTitle.textContent = `Selected Game: ${selectedGame.name}`;
+        } else {
+            generatedKeysTitle.textContent = 'Please select a game!';
+        }
     });
 });
