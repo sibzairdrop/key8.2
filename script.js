@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
             attempts: 20,
         },
         3: {
-            name: 'My Clone Army',
-            appToken: '74ee0b5b-775e-4bee-974f-63e7f4d5bacb',
-            promoId: 'fe693b26-b342-4159-8808-15e3ff7f8767',
-            timing: 180000,
-            attempts: 30,
+            name: 'Cafe Dash',
+            appToken: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
+            promoId: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
+            eventsDelay: 20000, // 20 seconds
+            attemptsNumber: 20,
         },
         4: {
             name: 'Train Miner',
