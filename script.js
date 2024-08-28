@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'Cafe Dash',
             appToken: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
             promoId: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
-            eventsDelay: 20000, // 20 seconds
-            attemptsNumber: 20,
+            timing: 20000, // 20 seconds
+            attempts: 20,
         },
         4: {
             name: 'Train Miner',
